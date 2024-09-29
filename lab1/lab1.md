@@ -1,6 +1,6 @@
 Вот оформленный текст с использованием Markdown:
 
-```markdown
+
 # Лабораторная работа №1
 
 ## Задание
@@ -33,4 +33,4 @@
 - [Program For You: Block Diagram Editor](https://programforyou.ru/block-diagram-redactor)
 - [GeeksforGeeks: C Program for Char to Int Conversion](https://www.geeksforgeeks.org/c-program-for-char-to-int-conversion/#:~:text=Each%20character%20in%20C%20has,'0'%20from%20the%20character.)
 - [HubSpot: Standard Library C Functions](https://blog.hubspot.com/website/standard-library-c-functions)
-```
+
