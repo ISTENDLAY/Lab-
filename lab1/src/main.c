@@ -109,5 +109,6 @@ double str2float(char *str, int point){
         fprintf(log, "Input: %lf %lf %lf\nOutput: %lf\n\n", d1,d2,d3,res);
     }
     while (d1||d2||d3);
+    fclose(log);
     return 0;
  }
