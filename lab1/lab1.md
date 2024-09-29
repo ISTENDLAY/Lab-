@@ -29,7 +29,7 @@
 - Проверяем валидность строки (наличие только символов цифр, а также одной точки для нецелых чисел), возвращаем 1 (True), а также количество точек (0 для целых или 1 для вещественных). В случае невалидности просим ввести число повторно.
 - Далее, пользуясь свойствами десятичной системы исчисления, каждую цифру умножаем на 10 в степени порядка этой цифры.<br><br>
   *пример защиты от неверного пользовательского ввода*
-  ![alt text](https://github.com/ISTENDLAY/Labs/blob/main/lab1/img/output_example.png?raw=true) <br><br>
+  ![alt text](https://github.com/ISTENDLAY/Labs/blob/main/lab1/img/wrong_input.png?raw=true) <br><br>
 
 ## Источники
 - [TutorialsPoint: C Standard Library Functions](https://www.tutorialspoint.com/c_standard_library/c_function_fclose.htm)
