@@ -1,0 +1,9 @@
+#! /usr/bin/gnuplot -persist
+#set terminal postscript eps enhanced color solid
+#set terminal png size 800, 600
+#set output "~/kolen/Labs/lab2/img/graph.ps"
+set xlabel "x" 
+set ylabel "Y"
+set grid
+set title "Gnuplot for lab" font "Helvetica Bold, 20"
+plot "graph.txt" with lines title "f(x)"
