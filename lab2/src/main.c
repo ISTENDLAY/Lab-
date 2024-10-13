@@ -71,7 +71,7 @@ void for_loop(double h){
 FILE* gnuplot_init(char title[], char func_name[]){
     FILE* gnuplot = popen("gnuplot -persistance", "w");
     fprintf(gnuplot, "set terminal gif animate delay 4\n");
-    fprintf(gnuplot, "set output 'plot.gif'\n", title);
+    fprintf(gnuplot, "set output '/home/istend/All_code/University/Labs/lab2/img/plot.gif'\n", title);
     fprintf(gnuplot, "set title '%s'\n", title);
     fprintf(gnuplot, "set xlabel 'x'\n");
     fprintf(gnuplot, "set ylabel '%s'\n", func_name);
