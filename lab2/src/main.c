@@ -8,17 +8,17 @@ double f(double x);
 void while_loop(double h);
 void for_loop(double h);
 FILE* gnuplot_init(char title[], char func_name[]);
-void noob_level();
+void noob_level(double h);
 void pro_level();
+double str2float(char *str, int point);
 
 
-int main(){
-    char difficulty[9];
-    printf("Choose a difficulty of task [Rare/Medium]: ");
-    scanf("%s", &difficulty);
-    if (!strcmp(difficulty,"Rare")){
-        noob_level();
-    }else if(!strcmp(difficulty,"Medium")){
+int main(int argc, char **argv){
+    char* difficulty = argv[1];
+    if (!strcmp(difficulty,"-r")){
+        double h = strtof(argv[2], NULL);
+        noob_level(h);
+    }else if(!strcmp(difficulty,"-m")){
         pro_level();
     }
 }
@@ -38,10 +38,7 @@ void pro_level(){ //difficulty: Medium
     }
 }
 
-void noob_level(){ //difficulty: Rare
-    double h;
-    printf("Choose a step: ");
-    scanf("%lf", &h);
+void noob_level(double h){ //difficulty: Rare
     for_loop(h);
 }
 
@@ -71,7 +68,7 @@ void for_loop(double h){
 FILE* gnuplot_init(char title[], char func_name[]){
     FILE* gnuplot = popen("gnuplot -persistance", "w");
     fprintf(gnuplot, "set terminal gif animate delay 4\n");
-    fprintf(gnuplot, "set output '/home/istend/All_code/University/Labs/lab2/img/plot.gif'\n", title);
+    fprintf(gnuplot, "set output '../img/plot.gif'\n", title);
     fprintf(gnuplot, "set title '%s'\n", title);
     fprintf(gnuplot, "set xlabel 'x'\n");
     fprintf(gnuplot, "set ylabel '%s'\n", func_name);
@@ -79,4 +76,29 @@ FILE* gnuplot_init(char title[], char func_name[]){
     fprintf(gnuplot, "set yrange[-0.45:1.4]\n");
     fprintf(gnuplot, "set grid\n");
     return gnuplot;
+}
+
+
+double str2float(char *str, int point){
+    double res = 0;
+    int len = strlen(str);
+    if(point){
+        int point = strcspn(str, ".");
+        int i = 0;
+        int d = point-1;
+        for(i;i<len-1;i++){
+            if(i==point){
+                continue;
+            }
+            res+=(*(str+i)-'0')*pow(10.0f, d);
+            d--;
+        }
+    }else{
+        int d = len-2;
+        for(int i=0; i<len-1;i++){
+            res+=(*(str+i)-'0')*pow(10.0f, d);
+            d--;
+        }
+    }
+    return res;
 }
