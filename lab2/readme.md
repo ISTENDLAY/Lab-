@@ -17,7 +17,7 @@
 ![alt text](https://github.com/ISTENDLAY/Labs/blob/main/lab2/img/Screenshot_20241021_110455.png?raw=true)
 
 ### График функции:
-*здесь будет гиф*
+![animation](https://github.com/ISTENDLAY/Labs/blob/main/lab2/img/plot.gif?raw=true)
 
 ## Используемые материалы:
 - [Stack Overflow: arguments to main in C](https://stackoverflow.com/questions/4176326/arguments-to-main-in-c)
