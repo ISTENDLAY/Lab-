@@ -5,16 +5,16 @@
 ./main -r [step h] > graph.txt # h - вещественное число, r от rare
 ./plot.gpi
 ```
-*здесь будет изображение*
+![alt text](https://github.com/ISTENDLAY/Labs/blob/main/lab2/img/изображение.png?raw=true)
 
 ### Блок схема для создания данных используя цикл while:
-*здесь будет изображение*
+![alt text](https://github.com/ISTENDLAY/Labs/blob/main/lab2/img/diagram.png?raw=true
 
 ## Для создания .gif анимации:
 ```bash
 ./main -m # m от medium
 ```
-*здесь будет изображение*
+![alt text](https://github.com/ISTENDLAY/Labs/blob/main/lab2/img/Screenshot_20241021_110455.png?raw=true)
 
 ### График функции:
 *здесь будет гиф*
