@@ -78,27 +78,3 @@ FILE* gnuplot_init(char title[], char func_name[]){
     return gnuplot;
 }
 
-
-double str2float(char *str, int point){
-    double res = 0;
-    int len = strlen(str);
-    if(point){
-        int point = strcspn(str, ".");
-        int i = 0;
-        int d = point-1;
-        for(i;i<len-1;i++){
-            if(i==point){
-                continue;
-            }
-            res+=(*(str+i)-'0')*pow(10.0f, d);
-            d--;
-        }
-    }else{
-        int d = len-2;
-        for(int i=0; i<len-1;i++){
-            res+=(*(str+i)-'0')*pow(10.0f, d);
-            d--;
-        }
-    }
-    return res;
-}
